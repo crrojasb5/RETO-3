@@ -1,7 +1,9 @@
-# Ejercicio:
+# Reto 3
 
-Create class Line.
+**Ejercicio:**
 
+1. Create class Line.
+```mermaid
 classDiagram
     class Line {
       +float length
@@ -14,6 +16,7 @@ classDiagram
       +compute_horizontal_cross()
       +compute_vertical_cross()
     }
+```
 
 - length, slope, start, end: Instance attributes, two of them being points (so a line is composed at least of two points).
 - compute_length(): should return the line´s length
@@ -31,3 +34,35 @@ Optional: Define a method called discretize_line() that creates an array on n eq
 4. Create subclasses for different types of menu items: Inherit from MenuItem and define properties specific to each type (e.g., Beverage, Appetizer, MainCourse).
 5. Define an Order class: This class should have a list of MenuItem objects and methods to add items, calculate the total bill amount, and potentially apply specific discounts based on the order composition.
 6. Create a class diagram with all classes and their relationships. The menu should have at least 10 items. The code should follow PEP8 rules.
+
+   
+**For this challenge, use the previous exercise.**
+
+**Ejercicio:**
+1. Cree la clase Rectangle.
+```mermaid
+classDiagram
+    class Rectangle {
+      +float width
+      +float height
+      +Point center
+      +__init__(self, method)
+      +compute_area()
+      +computer_perimeter()
+    }
+```
+ - The rectangle should be inicialice using any of these 3 methods:
+    + Method 1: Bottom-left corner(Point) + width and height
+    + Method 2: Center(Point) + width and height
+    + Method 3: Two opposite corners (Points) e.g. Bottom-left and Upper-right
+
+ - *width*, *height*, center: Instance attributes
+ - compute_area(): should return the area of the rectangle
+ - compute_perimeter(): should return the perimeter of the rectangle
+
+2. Create a class Square() that inherited the required attributes and methods from Rectangle.
+
+3. Create a method called compute_interference_point(Point) that returns if a point is inside or a rectangle.
+
+4. **Optional:** Define a method called compute_interference_line() that return if a line or part of it is inside of a rectangle.
+
