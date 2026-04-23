@@ -1,0 +1,38 @@
+# DIAGRAMA DE CLASES SOBRE EL RESTAURANTE
+
+```mermaid
+classDiagram
+direction UD
+
+MenuItem <|-- Beverage
+MenuItem <|-- MainCourse
+MenuItem <|-- Dessert
+Order "1" *-- "1..*" MenuItem
+
+class  MenuItem{
+    +str Name
+    +int Price
+    +calculate_total_price()  
+    }
+    
+class Beverage{
+    +int Volume_ml
+    }
+
+class MainCourse{
+    +str Protein
+    +str Side_dish
+    }
+
+class Dessert{
+    +str Texture
+    }
+
+class Order{
+    +list Item
+    +add_item(item: MenuItem) 
+    +calculate_total() int
+    +apply_discount() float
+    }
+
+```
